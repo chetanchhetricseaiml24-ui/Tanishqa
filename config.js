@@ -42,7 +42,7 @@ const CONFIG = {
             image: "assets/images/photo1.jpg",
             fallback: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80",
             caption: "Your infectious smile that brightens my darkest days.",
-            date: "Our Sweetest Moment"
+            date: "A Smile That Melts My Heart"
         },
         {
             image: "assets/images/photo2.jpeg",
