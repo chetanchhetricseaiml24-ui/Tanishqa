@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love! 💖</title>
+    <!-- Romantic Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Romantic Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+</head>
+<body>
+
+    <!-- Background Canvas for Falling Rose Petals & Floating Sparkles -->
+    <canvas id="petalsCanvas"></canvas>
+
+    <!-- Floating Romantic Music Toggle Button -->
+    <button class="music-toggle-btn music-paused" id="musicToggleBtn" title="Toggle Romantic Music" aria-label="Toggle Romantic Music">
+        <span class="music-icon">🎵</span>
+        <div class="music-waves">
+            <div class="music-wave-bar"></div>
+            <div class="music-wave-bar"></div>
+            <div class="music-wave-bar"></div>
+            <div class="music-wave-bar"></div>
+        </div>
+        <span class="music-text" style="font-size: 0.85rem; font-weight: 500;">Music</span>
+    </button>
+
+    <!-- ==================================================================== -->
+    <!-- 1. ENTRANCE / SURPRISE CURTAIN OVERLAY                               -->
+    <!-- ==================================================================== -->
+    <div class="entrance-overlay" id="entranceOverlay">
+        <div class="envelope-wrapper">
+            <div class="gift-box-icon" id="giftBoxIcon" role="button" tabindex="0">🎁</div>
+            <h1 class="entrance-title" id="entranceTitle">A Surprise For Someone Truly Special</h1>
+            <p class="entrance-subtitle" id="entranceSubtitle">Turn on your volume, take a deep breath, and open your gift...</p>
+            <button class="btn-romantic" id="openSurpriseBtn">
+                <span>Open With Love 💌</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================================================================== -->
+    <!-- 2. HERO CELEBRATION SECTION                                          -->
+    <!-- ==================================================================== -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-badge" id="heroBadge">✨ Happy Birthday To The Love Of My Life ✨</div>
+            <h1 class="hero-title" id="heroTitle">
+                Happy Birthday, <span class="hero-her-name dynamic-her-name">My Love</span>
+            </h1>
+            <p class="hero-subtext" id="heroSubtext">
+                Today the world celebrates the most gorgeous, pure, and precious soul to ever exist. I am the luckiest person alive to call you mine.
+            </p>
+            <div class="scroll-indicator">
+                <span id="scrollHintText">Scroll down for your surprises</span>
+                <span>↓</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================================================================== -->
+    <!-- 3. INTERACTIVE BIRTHDAY CAKE SECTION                                 -->
+    <!-- ==================================================================== -->
+    <section class="cake-section" id="cakeSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="cakeTitle">Make a Birthday Wish</h2>
+                <p class="section-subtitle" id="cakeSubtitle">Close your eyes, picture the dream closest to your heart, and blow out the candles!</p>
+            </div>
+
+            <div class="cake-stage">
+                <!-- Illustrated Interactive Cake -->
+                <div class="cake-container">
+                    <div class="candles-row">
+                        <!-- Candle 1 -->
+                        <div class="candle">
+                            <div class="wick"></div>
+                            <div class="flame"></div>
+                            <div class="smoke"></div>
+                        </div>
+                        <!-- Candle 2 -->
+                        <div class="candle">
+                            <div class="wick"></div>
+                            <div class="flame"></div>
+                            <div class="smoke"></div>
+                        </div>
+                        <!-- Candle 3 -->
+                        <div class="candle">
+                            <div class="wick"></div>
+                            <div class="flame"></div>
+                            <div class="smoke"></div>
+                        </div>
+                    </div>
+                    <!-- Cake Frosting Layer -->
+                    <div class="cake-layer cake-top"></div>
+                    <!-- Cake Base Layer -->
+                    <div class="cake-layer cake-bottom"></div>
+                    <!-- Serving Plate -->
+                    <div class="cake-plate"></div>
+                </div>
+
+                <button class="btn-romantic" id="blowCandlesBtn">
+                    ✨ Make a Wish & Blow the Candles ✨
+                </button>
+
+                <!-- Hidden Wish Reveal Card -->
+                <div class="wish-card" id="wishCard">
+                    <h3 class="wish-card-title" id="wishTitle">🎉 Happy Birthday Dear BF Jii 🎉</h3>
+                    <p class="wish-card-text" id="wishMessage">
+                        Have a Amazing Birthday! May your Life be filled with love, laughter, and all the happiness in the world. You deserve nothing but the best, today and always. 💖 God's Favorito Angel 🪽
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 4. POLAROID PHOTO MEMORY GALLERY                                     -->
+    <!-- ==================================================================== -->
+    <section class="gallery-section" id="gallerySection">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2 class="section-title">Our Favorite Moments</h2>
+                <p class="section-subtitle">Every photograph with you is a frozen piece of pure joy.</p>
+            </div>
+
+            <!-- Dynamic Polaroid Grid -->
+            <div class="polaroid-grid" id="polaroidGrid">
+                <!-- Generated dynamically via main.js from config.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal for Full View -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+            <img class="lightbox-img" id="lightboxImg" src="" alt="Full view">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- ==================================================================== -->
+    <!-- 5. CINEMA VIDEO SHOWCASE LOUNGE                                      -->
+    <!-- ==================================================================== -->
+    <section class="video-section" id="videoSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="videoTitle">A Special Video For You 🎥</h2>
+                <p class="section-subtitle" id="videoSubtitle">Turn your volume up and watch this little trip down our memory lane.</p>
+            </div>
+
+            <div class="cinema-frame">
+                <div class="video-wrapper">
+                    <video id="herVideo" controls playsinline preload="metadata">
+                        <!-- Source dynamically loaded from config.js -->
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="cinema-caption" id="videoCaption">Every second captured here is a reminder of how blessed I am to have you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 6. REASONS WHY I LOVE YOU                                            -->
+    <!-- ==================================================================== -->
+    <section class="reasons-section" id="reasonsSection">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2 class="section-title">Why You Have My Entire Heart</h2>
+                <p class="section-subtitle">A thousand words still wouldn't be enough to explain why you mean the world to me.</p>
+            </div>
+
+            <!-- Dynamic Reasons Grid -->
+            <div class="reasons-grid" id="reasonsGrid">
+                <!-- Populated dynamically via config.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 7. WAX-SEALED LOVE LETTER                                            -->
+    <!-- ==================================================================== -->
+    <section class="letter-section" id="letterSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">A Letter Written From The Heart</h2>
+                <p class="section-subtitle">Tap the wax seal to unfold what words usually struggle to express.</p>
+            </div>
+
+            <div class="letter-envelope">
+                <!-- Sealed Envelope Cover -->
+                <div class="wax-seal-wrapper" id="waxSealWrapper">
+                    <div class="wax-seal" title="Click to break seal">❤️</div>
+                    <span class="seal-prompt">Break Seal To Read Letter</span>
+                </div>
+
+                <!-- Unfolded Letter Paper -->
+                <article class="letter-paper" id="letterPaper">
+                    <h3 class="letter-greeting" id="letterGreeting">My Dearest Love,</h3>
+                    <div id="letterBody">
+                        <!-- Paragraphs populated dynamically from config.js -->
+                    </div>
+                    <div class="letter-signature-block">
+                        <p class="letter-closing" id="letterClosing">Forever and always yours,</p>
+                        <p class="letter-signature" id="letterSignature">Yours Always ❤️</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 8. FOOTER                                                            -->
+    <!-- ==================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <span class="footer-heart">💖</span>
+            <p class="footer-text">
+                Crafted with endless love for <strong class="dynamic-her-name">My Love</strong>
+            </p>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 6px;">
+                Happy Birthday • Wishing you all the happiness in the universe ✨
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="js/petals.js"></script>
+    <script src="js/confetti.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
