@@ -91,7 +91,7 @@ const CONFIG = {
         {
             icon: "✨",
             title: "Your Gentle Heart",
-            text: "You care for people with a warmth and sincerity that is so rare in this world. You inspire me to be kinder."
+            text: "You care for people and animals with a warmth and sincerity that is so rare in this world. You inspire me to be kinder."
         },
         {
             icon: "🌸",
@@ -99,24 +99,9 @@ const CONFIG = {
             text: "Nothing in this world compares to that split second when you catch my eye and give me that sweet, warm smile."
         },
         {
-            icon: "🌟",
-            title: "Your Unstoppable Passion",
-            text: "Listening to you talk about things you love makes you shine brighter than any star in the night sky."
-        },
-        {
-            icon: "🫂",
-            title: "Your Warm Hugs",
-            text: "No matter how stressful or chaotic life gets, one hug from you immediately brings calm to my soul."
-        },
-        {
-            icon: "💫",
-            title: "Our Silly Inside Jokes",
-            text: "The glances we exchange across the room where nobody else understands what we're laughing about except us."
-        },
-        {
             icon: "❤️",
-            title: "Simply Being You",
-            text: "You don't have to try, you don't have to pretend. Being yourself is the most captivating thing in existence."
+            title: "Simply You",
+            text: "U are the Most Amazing Soul in Existence. Your love has transformed my world in ways I never thought possible. I thank the universe every day for bringing you into my life."
         }
     ],
 
